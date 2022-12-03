@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CONFIG_FILE_NAME=".zshrc"
+CONFIG_FOLDER_NAME="zsh"
+
+. $WSL_CONFIG_HOME/wsl-substitute-config $CONFIG_FOLDER_NAME $CONFIG_FILE_NAME
+
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+if [ ! -d ${ZSH:-~/.oh-my-zsh}/plugins/zsh-syntax-highlighting ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH:-~/.oh-my-zsh}/plugins/zsh-syntax-highlighting
+fi
+if [ ! -d ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions ]; then
+  git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+fi
