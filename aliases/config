@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ln -s $WSL_CONFIG_HOME/aliases/aliases $HOME/.aliases

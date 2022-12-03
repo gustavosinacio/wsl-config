@@ -5,3 +5,5 @@ export WSL_CONFIG_HOME=$HOME/wsl-config
 ./zsh/config
 ./profile/config
 ./gitconfig/config
+./spaceship-theme/config
+./aliases/config
